@@ -12,6 +12,8 @@ window.onload = function() {
   let adj = ["great", "big"];
   let noun = ["jogger", "racoon"];
 
+  var htmlElement = document.getElementById("domain-list");
+
   for (let i = 0; i < pronoun.length; i++) {
     for (let j = 0; j < adj.length; j++) {
       for (let k = 0; k < noun.length; k++) {
@@ -22,4 +24,7 @@ window.onload = function() {
     }
   }
   console.log(domain);
+  for (let i = 0; i < domain.length; i++) {
+    htmlElement.innerHTML += "<li>" + domain[i] + "</li>";
+  }
 };
